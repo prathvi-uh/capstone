@@ -31,24 +31,6 @@ footer picture img {
   display: block;
 }
 
-/* COPYRIGHT */
-footer .footer-copy {
-  margin-top: 20px;
-  max-width: 720px;
-}
-
-/* COPYRIGHT TEXT */
-footer .footer-copy p {
-  font-size: 13px;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-
-/* COPYRIGHT FIRST LINE */
-footer .footer-copy p:first-child {
-  font-size: 14px;
-}
-
 /* footer paragraph wrapper */
 footer .default-content-wrapper {
   width: 100%;
@@ -85,6 +67,24 @@ footer .footer-social-icons {
 
 footer .footer-social-icons a {
   color: #000;
+  font-size: 14px;
+}
+
+/* COPYRIGHT */
+footer .footer-copy {
+  margin-top: 20px;
+  max-width: 720px;
+}
+
+/* COPYRIGHT TEXT */
+footer .footer-copy p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* COPYRIGHT FIRST LINE */
+footer .footer-copy p:first-child {
   font-size: 14px;
 }
 
