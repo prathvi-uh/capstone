@@ -1,0 +1,27 @@
+.breadcrumb {
+  margin: 32px 0 20px;
+}
+
+.breadcrumb-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.breadcrumb-parent {
+  color: #111;
+}
+
+.breadcrumb-separator {
+  color: #e1cf00;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.breadcrumb-current {
+  color: #6b6b6b;
+}

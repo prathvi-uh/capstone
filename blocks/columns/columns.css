@@ -1,33 +1,261 @@
-.columns > div {
-  display: flex;
-  flex-direction: column;
+.columns.article {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
 }
 
-.columns img {
-  width: 100%;
-}
-
-.columns > div > div {
-  order: 1;
-}
-
-.columns > div > .columns-img-col {
-  order: 0;
-}
-
-.columns > div > .columns-img-col img {
+/* reduce image size inside columns(article) */
+.columns.article picture img {
+  width: 700px;
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
-@media (width >= 900px) {
-  .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
-  }
+.columns.article > div {
+  display: grid;
+  grid-template-columns: minmax(0, -1.9fr) minmax(280px, -0.1fr);
+  gap: 90px;
+  align-items: start;
+}
 
-  .columns > div > div {
-    flex: 1;
-    order: unset;
-  }
+.columns.article > div > div:first-child,
+.columns.article > div > div:last-child {
+  min-width: 0;
+}
+
+.columns.article h1,
+.columns.article h2 {
+  font-size: 58px;
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 0 0 34px;
+  color: #111;
+}
+
+.columns.article h3,
+.columns.article h4,
+.columns.article strong {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 34px;
+  color: #111;
+}
+
+.columns.article p {
+  font-size: 18px;
+  line-height: 1.85;
+  margin: 0 0 24px;
+  color: #111;
+  text-align: justify;
+}
+
+/* Quote styling inside article */
+.columns.article blockquote {
+  margin: 60px 0;
+  padding: 40px 50px;
+  background: #f3f3f3;
+  border-left: none;
+}
+
+/* quote text */
+.columns.article blockquote p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  line-height: 1.35;
+  font-weight: 400;
+  color: #111;
+  margin: 0;
+  text-align: left;
+}
+
+/* highlight strong text */
+.columns.article blockquote strong {
+  font-weight: 700;
+  text-transform: none;
+}
+
+/* noun text */
+.columns.article blockquote em {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Article title above author (WKND style) */
+.columns.article p:first-child strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: none;
+  color: #111;
+  display: block;
+  margin-bottom: 24px;
+}
+
+/* keep quote text smaller */
+.columns.article blockquote p strong {
+  font-size: 24px;
+}
+
+/* main layout */
+.related-articles-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* article content */
+.related-articles-container .columns-wrapper {
+  flex: 2;
+  max-width: 720px;
+}
+
+/* sidebar */
+.related-articles-container .related-articles-wrapper {
+  flex: 1;
+  max-width: 300px;
+}
+
+/* AUTHOR SECTION */
+.columns.author {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding-top: 40px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.columns.author > div {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  align-items: center;
+}
+
+/* left author info */
+.columns.author > div > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* author image */
+.columns.author picture img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* author name */
+.columns.author h2,
+.columns.author h3 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* author role */
+.columns.author p {
+  margin: 6px 0 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #6b6b6b;
+}
+
+/* social box */
+.columns.author > div > div:last-child {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  background: #222;
+  padding: 18px 28px;
+}
+
+.columns.author > div > div:last-child a {
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+/* social box */
+.columns.author > div > div:last-child {
+  background: #222;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+}
+
+/* icons */
+.columns.author > div > div:last-child a,
+.columns.author > div > div:last-child span {
+  color: #fff;
+  font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+}
+
+/* hover effect */
+.columns.author > div > div:last-child a:hover {
+  opacity: 0.7;
+}
+
+.columns.author > div > div:last-child img {
+  filter: invert(1);
+  width: 22px;
+}
+
+.columns.article h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+
+/* make all article headings look like main title */
+.columns.article h1,
+.columns.article h2,
+.columns.article h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: none;
+  margin: 40px 0 20px;
+}
+
+.columns.article p:first-child {
+  margin-bottom: 8px;
+}
+
+.columns.article > div > div:first-child > p:first-child {
+  margin-bottom: 0 !important;
+}
+
+/* Fix title inside columns article */
+.columns.article p:first-child {
+  margin: 0;
+}
+
+.columns.article p:first-child strong {
+  display: block;
+  width: 100%;
+  white-space: nowrap;      /* keeps text in one row */
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 58px;
+  line-height: 1.1;
+  font-weight: 400;
+  color: #111;
 }

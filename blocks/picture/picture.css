@@ -1,0 +1,18 @@
+.image {
+  max-width: 760px;
+  margin: 50px 0;
+}
+ 
+.image picture {
+  display: block;
+  width: 100%;
+}
+ 
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+ 
+ 
