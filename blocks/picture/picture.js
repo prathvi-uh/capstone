@@ -4,4 +4,3 @@ export default function decorate(block) {
     picture.classList.add('article-image');
   }
 }
- 
