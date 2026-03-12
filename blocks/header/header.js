@@ -48,6 +48,7 @@ function openOnKeydown(e) {
 function focusNavSection() {
   document.activeElement.addEventListener('keydown', openOnKeydown);
 }
+
 /**
  * Toggles all nav sections
  * @param {Element} sections The container element
@@ -59,6 +60,7 @@ function toggleAllNavSections(sections, expanded = false) {
     section.setAttribute('aria-expanded', expanded);
   });
 }
+
 /**
  * Toggles the entire nav
  * @param {Element} nav The container element
@@ -72,6 +74,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
+
   // enable nav dropdown keyboard accessibility
   if (navSections) {
     const navDrops = navSections.querySelectorAll('.nav-drop');
@@ -89,6 +92,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
       });
     }
   }
+
   // enable menu collapse on escape keypress
   if (!expanded || isDesktop.matches) {
     // collapse menu on escape press
@@ -100,6 +104,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
     nav.removeEventListener('focusout', closeOnFocusLost);
   }
 }
+
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -109,11 +114,14 @@ export default async function decorate(block) {
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
+
   // decorate nav DOM
   block.textContent = '';
   const nav = document.createElement('nav');
   nav.id = 'nav';
+
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
+
   const classes = ['brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
@@ -138,12 +146,12 @@ export default async function decorate(block) {
       });
     });
   }
-    // highlight current nav item like WKND
+
+  // highlight current nav item like WKND
   const currentPath = window.location.pathname.replace(/\/$/, '');
   if (navSections) {
     navSections.querySelectorAll('a').forEach((link) => {
       const linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/$/, '');
-
       if (
         currentPath === linkPath
         || (linkPath !== '' && linkPath !== '/' && currentPath.startsWith(linkPath))
@@ -154,17 +162,18 @@ export default async function decorate(block) {
       }
     });
   }
-  // shrink header on scroll like WKND
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  if (!header) return;
 
-  if (window.scrollY > 80) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
+  // shrink header on scroll like WKND
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (!header) return;
+    if (window.scrollY > 80) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
   // hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
@@ -174,6 +183,7 @@ window.addEventListener('scroll', () => {
   hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
+
   // prevent mobile nav behavior on window resize
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
