@@ -3,7 +3,7 @@ export default function decorate(block) {
   let currentSlide = 0;
   const wrapper = document.createElement('div');
   wrapper.className = 'carousel-slides';
-  slides.forEach((slide, index) => {
+  slides.forEach((slide) => {
     slide.classList.add('carousel-slide');
     const img = slide.querySelector('picture');
     const text = slide.querySelectorAll('p, h1, h2, h3, a');
@@ -27,6 +27,14 @@ export default function decorate(block) {
   /* Dots */
   const pagination = document.createElement('div');
   pagination.className = 'carousel-pagination';
+  function updateCarousel() {
+    slides.forEach((slide, i) => {
+      slide.style.display = i === currentSlide ? 'block' : 'none';
+    });
+    [...pagination.children].forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentSlide);
+    });
+  }
   slides.forEach((_, i) => {
     const dot = document.createElement('button');
     if (i === 0) dot.classList.add('active');
@@ -37,14 +45,6 @@ export default function decorate(block) {
     pagination.append(dot);
   });
   block.append(pagination);
-  function updateCarousel() {
-    slides.forEach((slide, i) => {
-      slide.style.display = i === currentSlide ? 'block' : 'none';
-    });
-    [...pagination.children].forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentSlide);
-    });
-  }
   prev.addEventListener('click', () => {
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     updateCarousel();

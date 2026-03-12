@@ -46,10 +46,15 @@ export default function decorate(block) {
     }
     ul.append(li);
   });
-  ul.querySelectorAll('picture > img').forEach((img) =>
+  ul.querySelectorAll('picture > img').forEach((img) => {
     img.closest('picture').replaceWith(
-      createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])
-    )
-  );
+      createOptimizedPicture(
+        img.src,
+        img.alt,
+        false,
+        [{ width: '750' }],
+      ),
+    );
+  });
   block.replaceChildren(ul);
 }
