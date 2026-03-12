@@ -138,6 +138,33 @@ export default async function decorate(block) {
       });
     });
   }
+    // highlight current nav item like WKND
+  const currentPath = window.location.pathname.replace(/\/$/, '');
+  if (navSections) {
+    navSections.querySelectorAll('a').forEach((link) => {
+      const linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/$/, '');
+
+      if (
+        currentPath === linkPath
+        || (linkPath !== '' && linkPath !== '/' && currentPath.startsWith(linkPath))
+      ) {
+        link.classList.add('active');
+        const parentLi = link.closest('li');
+        if (parentLi) parentLi.classList.add('active');
+      }
+    });
+  }
+  // shrink header on scroll like WKND
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  if (!header) return;
+
+  if (window.scrollY > 80) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
   // hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
