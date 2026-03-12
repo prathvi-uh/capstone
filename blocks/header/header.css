@@ -439,14 +439,17 @@ main {
 }
 
 /* default header size */
+/* stylelint-disable-next-line no-duplicate-selectors */
 header .nav-wrapper {
   transition: all 0.3s ease;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 header .nav-brand img {
   transition: width 0.3s ease;
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 header nav {
   transition: min-height 0.3s ease, padding 0.3s ease;
 }
