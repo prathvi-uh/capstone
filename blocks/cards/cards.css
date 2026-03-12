@@ -162,6 +162,7 @@
   color: #111;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .cards.prof .cards-card-body p {
   margin: 0 0 18px;
   font-size: 18px;
@@ -194,6 +195,7 @@
   background: #444;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .cards.team img {
   width: 150px;
   height: 150px;
@@ -203,11 +205,13 @@
   margin: 0 auto;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .cards.team li {
   text-align: center;
 }
 
 /* Center headings */
+/* stylelint-disable-next-line no-descending-specificity */
 .cards.team li h3,
 .cards.team li h5 {
   text-align: center;
@@ -215,6 +219,7 @@
 }
 
 /* SOCIAL BAR */
+/* stylelint-disable-next-line no-descending-specificity */
 .cards.team li p:last-child {
   background: #222;
   display: flex;
@@ -228,6 +233,7 @@
 }
 
 /* FORCE ICON LINKS INLINE */
+/* stylelint-disable-next-line no-descending-specificity */
 .cards.team li p:last-child a {
   display: inline-flex;
   align-items: center;
