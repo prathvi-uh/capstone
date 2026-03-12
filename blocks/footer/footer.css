@@ -31,32 +31,6 @@ footer picture img {
   display: block;
 }
 
-/* footer paragraph wrapper */
-footer .default-content-wrapper {
-  width: 100%;
-  margin-top: 12px;
-}
-
-/* footer paragraph text */
-footer .default-content-wrapper p {
-  font-size: 12px;
-  line-height: 1.6;
-  margin: 0 0 12px;
-  color: #fff;
-}
-
-/* copyright line */
-footer .default-content-wrapper p:first-child {
-  font-size: 14px;
-  margin-bottom: 16px;
-}
-
-/* links */
-footer .default-content-wrapper a {
-  color: #fff;
-  text-decoration: underline;
-}
-
 /* SOCIAL ICON BOX */
 footer .footer-social-icons {
   background: #eee;
@@ -86,6 +60,32 @@ footer .footer-copy p {
 /* COPYRIGHT FIRST LINE */
 footer .footer-copy p:first-child {
   font-size: 14px;
+}
+
+/* footer paragraph wrapper */
+footer .default-content-wrapper {
+  width: 100%;
+  margin-top: 12px;
+}
+
+/* footer paragraph text */
+footer .default-content-wrapper p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+  color: #fff;
+}
+
+/* copyright line */
+footer .default-content-wrapper p:first-child {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* links */
+footer .default-content-wrapper a {
+  color: #fff;
+  text-decoration: underline;
 }
 
 /* NAVIGATION */
