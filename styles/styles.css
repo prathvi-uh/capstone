@@ -329,15 +329,14 @@ main .section.highlight {
 /* 1. Target the button inside the p.button-wrapper to add the teaser gap */
 .default-content-wrapper .button-wrapper {
   margin-top: 40px !important; /* This creates the 'teaser' space above the button */
-  text-align: left;          /* This centers the button if needed */
+  text-align: left; /* This centers the button if needed */
 }
 
 /* 2. Target the <a> tag with class 'button' inside that wrapper */
 .default-content-wrapper .button-wrapper a.button {
   display: inline-block !important;
   background-color: #ffd800 !important; /* Your Yellow */
-  background: #ffd800 !important;
-  color: #000000 !important;
+  color: #000 !important;
   padding: 15px 35px !important;
   font-weight: bold !important;
   text-decoration: none !important;
@@ -350,15 +349,17 @@ main .section.highlight {
 
 /* 3. Hover state for the All Articles button */
 .default-content-wrapper .button-wrapper a.button:hover {
-  background-color: #000000 !important;
+  background-color: #000 !important;
   color: #ffd800 !important;
 }
 
 /* 4. Target the text span inside the button (for CMP structure) */
+/* stylelint-disable-next-line selector-class-pattern */
 .default-content-wrapper .button-wrapper a.button .cmp-button__text {
-  color: #000000 !important;
+  color: #000 !important;
 }
 
+/* stylelint-disable-next-line selector-class-pattern */
 .default-content-wrapper .button-wrapper a.button:hover .cmp-button__text {
   color: #ffd800 !important;
 }
@@ -368,4 +369,3 @@ main .section.highlight {
   margin: 40px 0;
   width: 100%;
 }
- 

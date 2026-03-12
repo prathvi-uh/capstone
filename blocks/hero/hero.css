@@ -1,4 +1,4 @@
-/* --- Your original styles (Unchanged) --- */
+
 .hero-wrapper {
   display: flex;
   align-items: center;
@@ -30,14 +30,13 @@
 }
 
 /* This targets any link with both 'button' and 'primary' classes anywhere in the hero */
-.hero-wrapper a.button.primary, 
+.hero-wrapper a.button.primary,
 .hero-wrapper .button.primary {
   display: inline-block !important;
-  margin-top: 25px !important; /* This creates the 'teaser' space manually */
+  margin-top: 25px !important;
   padding: 15px 35px !important;
   background-color: #ffd800 !important;
-  background: #ffd800 !important;
-  color: #000000 !important;
+  color: #000 !important;
   font-weight: bold !important;
   text-decoration: none !important;
   border-radius: 4px !important;
@@ -51,4 +50,3 @@
   background-color: #000 !important;
   color: #ffd800 !important;
 }
-

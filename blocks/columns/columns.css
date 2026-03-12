@@ -14,6 +14,7 @@
 
 .columns.article > div {
   display: grid;
+  /* stylelint-disable-next-line declaration-property-value-no-unknown */
   grid-template-columns: minmax(0, -1.9fr) minmax(280px, -0.1fr);
   gap: 90px;
   align-items: start;
@@ -87,6 +88,7 @@
 }
 
 /* Article title above author (WKND style) */
+/* stylelint-disable-next-line no-descending-specificity */
 .columns.article p:first-child strong {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 48px;
@@ -99,6 +101,7 @@
 }
 
 /* keep quote text smaller */
+/* stylelint-disable-next-line no-descending-specificity */
 .columns.article blockquote p strong {
   font-size: 24px;
 }
@@ -133,6 +136,7 @@
   border-top: 1px solid #e5e5e5;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .columns.author > div {
   display: grid;
   grid-template-columns: 1fr 220px;
@@ -164,6 +168,7 @@
 }
 
 /* author role */
+/* stylelint-disable-next-line no-descending-specificity */
 .columns.author p {
   margin: 6px 0 0;
   font-size: 12px;
@@ -188,6 +193,7 @@
 }
 
 /* social box */
+/* stylelint-disable-next-line no-duplicate-selectors */
 .columns.author > div > div:last-child {
   background: #222;
   padding: 18px 40px;
@@ -245,10 +251,12 @@
 }
 
 /* Fix title inside columns article */
+/* stylelint-disable-next-line no-duplicate-selectors,no-descending-specificity */
 .columns.article p:first-child {
   margin: 0;
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .columns.article p:first-child strong {
   display: block;
   width: 100%;
