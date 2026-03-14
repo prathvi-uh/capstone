@@ -44,7 +44,7 @@
 }
 
 /* ===== Tablet ===== */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .tabs ul {
     gap: 20px;
     flex-wrap: wrap;
@@ -58,8 +58,7 @@
 }
 
 /* ===== Mobile ===== */
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
   .tabs ul {
     gap: 12px;
   }
@@ -71,7 +70,7 @@
 }
 
 /* ===== Small Mobile ===== */
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .tabs ul {
     gap: 10px;
   }

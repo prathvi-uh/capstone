@@ -42,7 +42,7 @@
 @media (width <= 900px) {
   .quote > div,
   .quote-box > div {
-    padding: 30px 30px;
+    padding: 30px;
   }
 
   .quote p {

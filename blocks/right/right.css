@@ -149,7 +149,7 @@
 }
 
 
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .section.right-container.columns-container {
     display: block !important;
     gap: 0 !important;
@@ -167,7 +167,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .section.right-container.columns-container .right-wrapper {
     margin-bottom: 24px !important;
   }

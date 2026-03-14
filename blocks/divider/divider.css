@@ -6,21 +6,21 @@
 }
 
 /* Tablet */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .divider {
     width: 4cm;
   }
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .divider {
     width: 3cm;
   }
 }
 
 /* Small Mobile */
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .divider {
     width: 2.5cm;
   }

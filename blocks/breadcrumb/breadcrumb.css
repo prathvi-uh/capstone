@@ -30,8 +30,7 @@
 
 
 /* Tablet */
-@media (max-width: 992px) {
-
+@media (width <= 992px) {
   .breadcrumb {
     margin: 24px 0 16px;
   }
@@ -49,8 +48,7 @@
 
 
 /* Mobile */
-@media (max-width: 600px) {
-
+@media (width <= 600px) {
   .breadcrumb {
     margin: 20px 0 14px;
   }

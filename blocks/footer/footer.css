@@ -135,8 +135,7 @@ footer .column > div > div:nth-child(3) p {
 }
 
 /* -------- Tablet -------- */
-@media (max-width: 1024px) {
-
+@media (width <= 1024px) {
   footer .column > div {
     grid-template-columns: 120px 1fr 1fr;
     column-gap: 25px;
@@ -158,8 +157,7 @@ footer .column > div > div:nth-child(3) p {
 
 
 /* -------- Mobile -------- */
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
   footer .column > div {
     grid-template-columns: 1fr;
     row-gap: 20px;
@@ -180,8 +178,7 @@ footer .column > div > div:nth-child(3) p {
 }
 
 /* -------- Small Mobile -------- */
-@media (max-width: 480px) {
-
+@media (width <= 480px) {
   footer .footer > div {
     padding: 24px 16px;
   }

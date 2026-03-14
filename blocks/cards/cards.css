@@ -276,8 +276,7 @@
 
 
 /* -------- Tablet -------- */
-@media (max-width: 1024px) {
-
+@media (width <= 1024px) {
   .cards > ul {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
@@ -304,8 +303,7 @@
 
 
 /* -------- Mobile -------- */
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
   .cards > ul {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -332,8 +330,7 @@
 
 
 /* -------- Small Mobile -------- */
-@media (max-width: 480px) {
-
+@media (width <= 480px) {
   .cards > ul {
     gap: 16px;
   }

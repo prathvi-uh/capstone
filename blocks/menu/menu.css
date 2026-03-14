@@ -54,7 +54,7 @@
   text-decoration: none;
 }
 
-@media (max-width: 899px) {
+@media (width <= 899px) {
   .menu {
     position: static;
     top: auto;
@@ -97,8 +97,7 @@
 }
 
 /* -------- Tablet -------- */
-@media (max-width: 1024px) {
-
+@media (width <= 1024px) {
   .adventure-layout {
     grid-template-columns: 220px 1fr !important;
     column-gap: 50px !important;
@@ -117,8 +116,7 @@
 }
 
 /* -------- Mobile -------- */
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
   .adventure-layout {
     grid-template-columns: 1fr !important;
     row-gap: 40px;
@@ -142,8 +140,7 @@
 }
 
 /* -------- Small Mobile -------- */
-@media (max-width: 480px) {
-
+@media (width <= 480px) {
   .menu .menu-item {
     padding-left: 18px;
   }

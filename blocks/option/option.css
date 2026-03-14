@@ -184,7 +184,7 @@
 }
 
 /* ===== MOBILE ===== */
-@media (max-width: 899px) {
+@media (width <= 899px) {
   .adventure-layout {
     grid-template-columns: 1fr !important;
     gap: 28px !important;
@@ -317,8 +317,7 @@
 }
 
 /* ===== TABLET ===== */
-@media (max-width: 1024px) {
-
+@media (width <= 1024px) {
   .adventure-layout {
     grid-template-columns: 200px minmax(0, 1fr) !important;
     column-gap: 60px !important;
@@ -340,12 +339,10 @@
 }
 
 /* ===== MOBILE ===== */
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
   .adventure-layout {
     grid-template-columns: 1fr !important;
-    column-gap: 0 !important;
-    row-gap: 40px !important;
+    gap: 40px 0 !important;
   }
 
   .adventure-menu,
@@ -380,8 +377,7 @@
 }
 
 /* ===== SMALL MOBILE ===== */
-@media (max-width: 480px) {
-
+@media (width <= 480px) {
   .option .option-nav {
     gap: 12px !important;
   }

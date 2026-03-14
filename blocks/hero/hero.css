@@ -51,8 +51,7 @@
 }
 
 /* -------- Tablet -------- */
-@media (max-width: 1024px) {
-
+@media (width <= 1024px) {
   .hero-wrapper {
     gap: 30px;
     padding: 30px 18px;
@@ -69,8 +68,7 @@
 }
 
 /* -------- Mobile -------- */
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
   .hero-wrapper {
     flex-direction: column;
     text-align: center;
@@ -94,8 +92,7 @@
 }
 
 /* -------- Small Mobile -------- */
-@media (max-width: 480px) {
-
+@media (width <= 480px) {
   .hero-wrapper {
     padding: 24px 16px;
   }
