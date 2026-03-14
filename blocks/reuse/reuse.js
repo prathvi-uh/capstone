@@ -23,6 +23,7 @@ export default function decorate(block) {
   dotsWrap.className = 'reuse-dots';
   function updateCarousel() {
     track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    // eslint-disable-next-line no-use-before-define
     dots.forEach((dot, index) => {
       dot.classList.toggle('active', index === currentSlide);
     });
