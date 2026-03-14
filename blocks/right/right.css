@@ -53,6 +53,7 @@
 }
 
 /* hide block title row */
+/* stylelint-disable-next-line no-descending-specificity */
 .right > div:first-child {
   display: none !important;
 }
@@ -68,6 +69,7 @@
 }
 
 /* each item */
+/* stylelint-disable-next-line no-descending-specificity */
 .right > div:not(:first-child) {
   margin: 0 0 24px !important;
   padding: 0 0 0 18px !important;
@@ -76,6 +78,7 @@
   min-height: auto !important;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .right > div > div {
   padding: 0 !important;
   margin: 0 !important;

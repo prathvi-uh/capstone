@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable no-duplicate-selectors */
 /* header and nav layout */
 header .nav-wrapper {
   width: 100%;
@@ -868,3 +870,6 @@ header .nav-sections .default-content-wrapper > ul > li.active > p > a {
     padding-top: 62px;
   }
 }
+
+/* stylelint-enable no-descending-specificity */
+/* stylelint-enable no-duplicate-selectors */
