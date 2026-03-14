@@ -201,14 +201,14 @@ export default async function decorate(block) {
     style.id = 'wknd-header-dialog-styles';
     style.textContent = `
       .wknd-topbar-real {
-        height: 38px;
+        height: 24px;
         background: linear-gradient(90deg, #111, #222);
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding: 0 90px;
+        padding: 0 70px;
+        gap: 8px;
         box-sizing: border-box;
-        gap: 12px;
         color: #fff;
         font-family: Arial, sans-serif;
       }
@@ -225,14 +225,18 @@ export default async function decorate(block) {
       .wknd-white-btn {
         background: #fff;
         color: #000 !important;
-        padding: 6px 14px;
+        border: 0;
+        margin: 0;
+        padding: 0 10px;
         border-radius: 2px;
-        font-size: 13px;
+        font-size: 11px;
         font-weight: 700;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 28px;
+        height: 16px;
+        min-height: 16px;
+        line-height: 16px;
         box-sizing: border-box;
       }
 
@@ -366,13 +370,17 @@ export default async function decorate(block) {
 
       @media (max-width: 899px) {
         .wknd-topbar-real {
-          padding: 0 20px;
-          gap: 10px;
+          height: 22px;
+          padding: 0 12px;
+          gap: 6px;
         }
 
         .wknd-white-btn {
-          padding: 6px 10px;
-          font-size: 12px;
+          padding: 0px 8px;
+          font-size: 10px;
+          height: 14px;
+          min-height: 14px;
+          line-height: 14px;
         }
 
         .wknd-signin-modal {

@@ -1,0 +1,398 @@
+/* ===== LAYOUT: MENU LEFT / OPTION RIGHT ===== */
+.adventure-layout {
+  display: grid !important;
+  grid-template-columns: 190px minmax(0, 1fr) !important;
+  gap: 42px !important;
+  align-items: start !important;
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  overflow: visible !important;
+}
+
+.adventure-menu {
+  align-self: start !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+}
+
+.adventure-option {
+  align-self: start !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  overflow: visible !important;
+}
+
+.adventure-option .option {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* ===== OPTION BLOCK ===== */
+.option {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* ===== TAB NAV ===== */
+.option .option-nav {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin: 0 0 28px !important;
+  padding: 0 !important;
+}
+
+.option .option-tab {
+  appearance: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: #111 !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0 !important;
+  padding: 16px 24px !important;
+  margin: 0 !important;
+  min-height: auto !important;
+}
+
+.option .option-tab:hover {
+  background: transparent !important;
+  color: #111 !important;
+}
+
+.option .option-tab.active {
+  background: #181818 !important;
+  color: #fff !important;
+}
+
+/* ===== PANELS ===== */
+.option .option-content {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.option .option-panel {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.option .option-panel.active {
+  display: block !important;
+}
+
+/* ===== PANEL INNER LAYOUT ===== */
+.option .option-panel-inner {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 28px !important;
+  align-items: start !important;
+  width: 100% !important;
+}
+
+/* text + image layout */
+.option .option-panel-inner.cols-2,
+.option .option-panel-inner.cols-3 {
+  grid-template-columns: minmax(0, 1fr) 420px !important;
+  gap: 36px !important;
+}
+
+/* ===== INNER CONTENT CLEANUP ===== */
+.option .option-col {
+  min-width: 0 !important;
+}
+
+.option .option-col > *:first-child {
+  margin-top: 0 !important;
+}
+
+.option .option-col > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* ===== TEXT ===== */
+.option .option-panel p {
+  margin: 0 0 18px !important;
+  color: #222 !important;
+  font-size: 18px !important;
+  line-height: 1.75 !important;
+  font-weight: 400 !important;
+  max-width: none !important;
+}
+
+.option .option-panel h1,
+.option .option-panel h2,
+.option .option-panel h3,
+.option .option-panel h4,
+.option .option-panel h5,
+.option .option-panel h6 {
+  margin: 0 0 16px !important;
+  color: #111 !important;
+}
+
+.option .option-panel ul,
+.option .option-panel ol {
+  margin: 0 0 18px 20px !important;
+  padding: 0 !important;
+}
+
+.option .option-panel li {
+  margin-bottom: 10px !important;
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+  color: #222 !important;
+}
+
+.option .option-panel a {
+  color: inherit !important;
+  text-decoration: underline !important;
+}
+
+/* ===== IMAGES ===== */
+.option .option-panel picture,
+.option .option-panel img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.option .option-panel picture img,
+.option .option-panel img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: cover !important;
+  border: 0 !important;
+}
+
+/* ===== SAFETY ===== */
+.option-wrapper,
+.option-container {
+  overflow: visible !important;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 899px) {
+  .adventure-layout {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  .option .option-nav {
+    gap: 10px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .option .option-tab {
+    font-size: 13px !important;
+    padding: 12px 14px !important;
+  }
+
+  .option .option-panel-inner,
+  .option .option-panel-inner.cols-2,
+  .option .option-panel-inner.cols-3 {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .option .option-panel p,
+  .option .option-panel li {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+  }
+}
+
+.option .option-nav {
+  margin-bottom: 50px !important;
+}
+
+/* little space above content */
+.option .option-panel {
+  padding-top: 10px !important;
+}
+
+/* space between text and image */
+.option .option-panel-inner {
+  gap: 50px !important;
+}
+
+/* space between left menu and option content */
+.adventure-layout {
+  column-gap: 80px !important;
+}
+
+/* safety override if grid already exists */
+.adventure-layout {
+  gap: 80px !important;
+}
+
+/* exact space between left menu and right option block */
+.adventure-layout {
+  display: grid !important;
+  grid-template-columns: 220px minmax(0, 1fr) !important;
+  column-gap: 220px !important;
+  gap: 0 110px !important;
+  align-items: start !important;
+}
+
+/* keep option starting from same top line */
+.adventure-option {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  width: 100% !important;
+}
+
+/* keep menu fixed width */
+.adventure-menu,
+.adventure-menu .menu,
+.adventure-menu .menu-list {
+  width: 220px !important;
+  max-width: 220px !important;
+  min-width: 220px !important;
+}
+
+/* keep right content from stretching too near */
+.option {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* tabs row */
+.option .option-nav {
+  margin: 0 0 40px !important;
+}
+
+/* content width and spacing */
+.option .option-panel-inner.cols-2,
+.option .option-panel-inner.cols-3 {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 520px !important;
+  gap: 60px !important;
+  align-items: start !important;
+}
+
+.option .option-nav {
+  gap: 48px !important;
+}
+
+/* WKND-like paragraph width and spacing */
+.option .option-panel p {
+  max-width: 980px !important;
+  font-size: 18px !important;
+  line-height: 1.9 !important;
+  margin: 0 0 20px !important;
+}
+
+/* keep text full width above image */
+.option .option-panel-inner,
+.option .option-panel-inner.cols-2,
+.option .option-panel-inner.cols-3 {
+  display: block !important;
+}
+
+/* image below paragraph */
+.option .option-col {
+  display: block !important;
+}
+
+.option .option-panel picture,
+.option .option-panel img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 980px !important;
+  height: auto !important;
+  margin-top: 18px !important;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+
+  .adventure-layout {
+    grid-template-columns: 200px minmax(0, 1fr) !important;
+    column-gap: 60px !important;
+  }
+
+  .adventure-menu,
+  .adventure-menu .menu,
+  .adventure-menu .menu-list {
+    width: 200px !important;
+    max-width: 200px !important;
+    min-width: 200px !important;
+  }
+
+  .option .option-panel picture,
+  .option .option-panel img {
+    max-width: 100% !important;
+  }
+
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  .adventure-layout {
+    grid-template-columns: 1fr !important;
+    column-gap: 0 !important;
+    row-gap: 40px !important;
+  }
+
+  .adventure-menu,
+  .adventure-menu .menu,
+  .adventure-menu .menu-list {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  .option .option-nav {
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .option .option-tab {
+    padding: 12px 16px !important;
+    font-size: 13px !important;
+  }
+
+  .option .option-panel p,
+  .option .option-panel li {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+
+  .option .option-panel picture,
+  .option .option-panel img {
+    max-width: 100% !important;
+  }
+
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+
+  .option .option-nav {
+    gap: 12px !important;
+  }
+
+  .option .option-tab {
+    padding: 10px 14px !important;
+    font-size: 12px !important;
+  }
+
+  .option .option-panel p,
+  .option .option-panel li {
+    font-size: 15px !important;
+  }
+}

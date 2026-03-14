@@ -42,3 +42,42 @@
   background: #222;
   color: #fff;
 }
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px) {
+  .tabs ul {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .tabs a {
+    padding: 14px 22px;
+    font-size: 15px;
+  }
+
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+
+  .tabs ul {
+    gap: 12px;
+  }
+
+  .tabs a {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+}
+
+/* ===== Small Mobile ===== */
+@media (max-width: 480px) {
+  .tabs ul {
+    gap: 10px;
+  }
+
+  .tabs a {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}

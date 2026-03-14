@@ -124,3 +124,183 @@
   background-color: #000 !important;
   color: #ffd800 !important;
 }
+
+/* -------- Tablet -------- */
+@media (max-width: 1024px) {
+
+  .carousel-slide img {
+    height: 420px;
+  }
+
+  .carousel-content {
+    left: 4%;
+    padding: 18px 24px;
+  }
+
+  .carousel-content h2 {
+    font-size: 24px;
+  }
+
+  .carousel-content p {
+    font-size: 13px;
+  }
+
+  .carousel-navigation button {
+    font-size: 24px;
+    padding: 8px 12px;
+  }
+
+}
+
+
+/* -------- Mobile -------- */
+@media (max-width: 768px) {
+
+  .carousel-slide img {
+    height: 320px;
+  }
+
+  .carousel-content {
+    left: 5%;
+    right: 5%;
+    padding: 16px 20px;
+  }
+
+  .carousel-content h2 {
+    font-size: 20px;
+  }
+
+  .carousel-content p {
+    font-size: 13px;
+  }
+
+  .carousel-content a.button.primary,
+  .carousel-content .button-primary {
+    padding: 12px 26px !important;
+    margin-top: 18px !important;
+  }
+
+  .carousel-navigation button {
+    font-size: 22px;
+    padding: 6px 10px;
+  }
+
+}
+
+
+/* -------- Small Mobile -------- */
+@media (max-width: 480px) {
+
+  .carousel-slide img {
+    height: 240px;
+  }
+
+  .carousel-content {
+    left: 6%;
+    right: 6%;
+    padding: 14px 16px;
+  }
+
+  .carousel-content h2 {
+    font-size: 18px;
+  }
+
+  .carousel-content p {
+    font-size: 12px;
+  }
+
+  .carousel-navigation button {
+    font-size: 20px;
+    padding: 6px 8px;
+  }
+
+}
+
+/* -------- Tablet -------- */
+@media (max-width: 1024px) {
+
+  .carousel-slide img {
+    height: 420px;
+  }
+
+  .carousel-content {
+    left: 4%;
+    padding: 18px 24px;
+  }
+
+  .carousel-content h2 {
+    font-size: 24px;
+  }
+
+  .carousel-content p {
+    font-size: 13px;
+  }
+
+  .carousel-navigation button {
+    font-size: 24px;
+    padding: 8px 12px;
+  }
+
+}
+
+
+/* -------- Mobile -------- */
+@media (max-width: 768px) {
+
+  .carousel-slide img {
+    height: 320px;
+  }
+
+  .carousel-content {
+    left: 5%;
+    right: 5%;
+    padding: 16px 20px;
+  }
+
+  .carousel-content h2 {
+    font-size: 20px;
+  }
+
+  .carousel-content p {
+    font-size: 13px;
+  }
+
+  .carousel-content a.button.primary,
+  .carousel-content .button-primary {
+    padding: 12px 26px !important;
+    margin-top: 18px !important;
+  }
+
+  .carousel-navigation button {
+    font-size: 22px;
+    padding: 6px 10px;
+  }
+}
+
+/* -------- Small Mobile -------- */
+@media (max-width: 480px) {
+
+  .carousel-slide img {
+    height: 240px;
+  }
+
+  .carousel-content {
+    left: 6%;
+    right: 6%;
+    padding: 14px 16px;
+  }
+
+  .carousel-content h2 {
+    font-size: 18px;
+  }
+
+  .carousel-content p {
+    font-size: 12px;
+  }
+
+  .carousel-navigation button {
+    font-size: 20px;
+    padding: 6px 8px;
+  }
+
+}

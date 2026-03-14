@@ -271,3 +271,79 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* -------- Laptop (default already works) -------- */
+
+
+/* -------- Tablet -------- */
+@media (max-width: 1024px) {
+
+  .cards > ul {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .cards.magazine > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards.prof {
+    max-width: 100%;
+  }
+
+  .cards.prof ul li {
+    max-width: 100%;
+  }
+
+  .cards.prof .cards-card-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+}
+
+
+/* -------- Mobile -------- */
+@media (max-width: 768px) {
+
+  .cards > ul {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .cards.magazine > ul {
+    grid-template-columns: 1fr;
+  }
+
+  .cards.prof .cards-card-image img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .cards.prof .cards-card-body h3 {
+    font-size: 24px;
+  }
+
+  .cards.prof .cards-card-body p {
+    font-size: 16px;
+  }
+
+}
+
+
+/* -------- Small Mobile -------- */
+@media (max-width: 480px) {
+
+  .cards > ul {
+    gap: 16px;
+  }
+
+  .cards-card-body {
+    margin: 12px;
+  }
+
+  .cards.prof .cards-card-image img {
+    width: 140px;
+    height: 140px;
+  }
+}

@@ -4,3 +4,24 @@
   background-color: yellow;
   margin: 20px 0;
 }
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .divider {
+    width: 4cm;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .divider {
+    width: 3cm;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .divider {
+    width: 2.5cm;
+  }
+}

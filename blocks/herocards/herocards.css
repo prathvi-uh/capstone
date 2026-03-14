@@ -67,3 +67,57 @@
 .herocards .button-wrapper a.button.primary:hover {
   background-color: #e6c700 !important;
 }
+
+/* -------- Tablet -------- */
+@media (max-width: 1024px) {
+
+  .herocards {
+    padding: 0 18px;
+  }
+
+  .hero-card-inner > div:nth-child(2) {
+    margin: -60px 30px 0;
+    padding: 2rem;
+  }
+
+  .hero-card-inner h3 {
+    font-size: 1.6rem;
+  }
+
+}
+
+/* -------- Mobile -------- */
+@media (max-width: 768px) {
+
+  .hero-card-inner > div:nth-child(2) {
+    margin: -40px 20px 0;
+    padding: 1.8rem;
+  }
+
+  .hero-card-inner h3 {
+    font-size: 1.4rem;
+  }
+
+  .hero-card-inner .button-container a,
+  .herocards .button-wrapper a.button.primary {
+    padding: 10px 24px !important;
+  }
+
+}
+
+/* -------- Small Mobile -------- */
+@media (max-width: 480px) {
+
+  .herocards {
+    padding: 0 14px;
+  }
+
+  .hero-card-inner > div:nth-child(2) {
+    margin: -25px 10px 0;
+    padding: 1.5rem;
+  }
+
+  .hero-card-inner h3 {
+    font-size: 1.25rem;
+  }
+}
