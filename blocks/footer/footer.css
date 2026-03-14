@@ -149,10 +149,10 @@ footer .column > div > div:nth-child(3) p {
     gap: 35px;
   }
 
+/*eslint-disable-next-line no-use-before-define*/
   footer .footer > div {
     padding: 28px 20px;
   }
-
 }
 
 
