@@ -1,13 +1,18 @@
 export default function decorate(block) {
   const cols = [...block.children[0]?.children || []];
   if (cols.length < 2) return;
-  const parentText = cols[0].textContent.trim();
-  const currentText = cols[1].textContent.trim();
+  const parentCell = cols[0];
+  const currentCell = cols[1];
+  const parentText = parentCell.textContent.trim();
+  const currentText = currentCell.textContent.trim();
+  const parentLink = parentCell.querySelector('a');
+  const parentHref = parentLink ? parentLink.href : '#';
   const wrapper = document.createElement('div');
   wrapper.className = 'breadcrumb-wrapper';
-  const parent = document.createElement('span');
+  const parent = document.createElement('a');
   parent.className = 'breadcrumb-parent';
   parent.textContent = parentText;
+  parent.href = parentHref;
   const separator = document.createElement('span');
   separator.className = 'breadcrumb-separator';
   separator.textContent = '▶';

@@ -7,15 +7,14 @@ export default function decorate(block) {
   const items = [...block.children];
   items.forEach((row) => {
     const li = document.createElement('li');
-    // for cards (tabs), read category from 3rd column before moving children
     let category = '';
     if (isTabs && row.children[2]) {
       category = row.children[2].textContent.trim().toLowerCase();
       li.dataset.category = category;
     }
     while (row.firstElementChild) li.append(row.firstElementChild);
+    let cardLink = null;
     [...li.children].forEach((div, index) => {
-      // hide 3rd column from display for cards (tabs)
       if (isTabs && index === 2) {
         div.remove();
         return;
@@ -24,15 +23,24 @@ export default function decorate(block) {
         div.className = 'cards-card-image';
       } else {
         div.className = 'cards-card-body';
+        const link = div.querySelector('a[href]');
+        if (link && !cardLink) {
+          cardLink = link.href;
+        }
         const title = div.querySelector('h1, h2, h3, h4, h5, h6, a');
         if (title && title.tagName !== 'H3') {
           const h3 = document.createElement('h3');
           h3.innerHTML = title.innerHTML;
           title.replaceWith(h3);
         }
+        div.querySelectorAll('a[href]').forEach((anchor) => {
+          const text = anchor.textContent.trim();
+          if (!text || text === anchor.href || text.toLowerCase() === 'read more') {
+            anchor.remove();
+          }
+        });
       }
     });
-    // Magazine variant
     if (isMagazine) {
       const body = li.querySelector('.cards-card-body');
       const image = li.querySelector('.cards-card-image');
@@ -43,6 +51,22 @@ export default function decorate(block) {
         body.prepend(badge);
         if (image) li.appendChild(image);
       }
+    }
+    if (cardLink) {
+      li.style.cursor = 'pointer';
+      li.setAttribute('role', 'link');
+      li.setAttribute('tabindex', '0');
+      li.addEventListener('click', (e) => {
+        const clickedAnchor = e.target.closest('a');
+        if (clickedAnchor) return;
+        window.location.href = cardLink;
+      });
+      li.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          window.location.href = cardLink;
+        }
+      });
     }
     ul.append(li);
   });
