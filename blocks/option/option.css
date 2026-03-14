@@ -1,6 +1,7 @@
 /* stylelint-disable no-descending-specificity */
 /* stylelint-disable no-duplicate-selectors */
 /* ===== LAYOUT: MENU LEFT / OPTION RIGHT ===== */
+
 .adventure-layout {
   display: grid !important;
   grid-template-columns: 190px minmax(0, 1fr) !important;
@@ -99,6 +100,8 @@
 .option .option-panel-inner {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr) !important;
+  
+  /* stylelint-disable-next-line declaration-block-no-shorthand-property-overrides */
   gap: 28px !important;
   align-items: start !important;
   width: 100% !important;
