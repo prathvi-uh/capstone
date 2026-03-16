@@ -136,6 +136,15 @@ export default async function decorate(block) {
       const buttonContainer = brandLink.closest('.button-container');
       if (buttonContainer) buttonContainer.className = '';
     }
+
+    const logo = navBrand.querySelector('picture, img, a');
+    if (logo) {
+      navBrand.style.cursor = 'pointer';
+      navBrand.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = '/home';
+      });
+    }
   }
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {

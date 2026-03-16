@@ -3,6 +3,7 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 export default function decorate(block) {
   const isMagazine = block.classList.contains('magazine');
   const isTabs = block.classList.contains('tabs');
+  const isTeam = block.classList.contains('team');
   const ul = document.createElement('ul');
   const items = [...block.children];
   items.forEach((row) => {
@@ -58,7 +59,8 @@ export default function decorate(block) {
       li.setAttribute('tabindex', '0');
       li.addEventListener('click', (e) => {
         const clickedAnchor = e.target.closest('a');
-        if (clickedAnchor) return;
+        const clickedIcon = e.target.closest('.icon');
+        if (clickedAnchor || clickedIcon) return;
         window.location.href = cardLink;
       });
       li.addEventListener('keydown', (e) => {
@@ -80,5 +82,24 @@ export default function decorate(block) {
       ),
     );
   });
+  if (isTeam) {
+    ul.querySelectorAll('li p:last-child .icon').forEach((icon) => {
+      icon.style.cursor = 'pointer';
+      icon.setAttribute('role', 'link');
+      icon.setAttribute('tabindex', '0');
+      icon.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = '/';
+      });
+      icon.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          e.stopPropagation();
+          window.location.href = '/';
+        }
+      });
+    });
+  }
   block.replaceChildren(ul);
 }
