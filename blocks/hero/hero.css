@@ -5,7 +5,7 @@
   max-width: 1200px;
   margin: auto;
   padding: 40px 20px;
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 .hero-col {
@@ -26,6 +26,7 @@
 .hero-col p {
   line-height: 1.6;
   color: #555;
+  text-align: justify;
 }
 
 /* This targets any link with both 'button' and 'primary' classes anywhere in the hero */
