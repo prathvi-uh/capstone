@@ -43,6 +43,7 @@
   font-size: 15px;
   line-height: 1.7;
   color: #111;
+  text-align: justify !important;
 }
 
 .accordion-item.active .accordion-content {
@@ -70,6 +71,7 @@
 
   .accordion-content {
     font-size: 14px;
+    text-align: justify;
   }
 }
 
@@ -93,5 +95,6 @@
   .accordion-content {
     font-size: 14px;
     padding-bottom: 16px;
+    text-align: justify;
   }
 }
