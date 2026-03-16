@@ -27,6 +27,7 @@
 }
 
 /* reduce card description text */
+/* stylelint-disable-next-line no-descending-specificity */
 .cards .cards-card-body p {
   font-size: 15px;
 }
