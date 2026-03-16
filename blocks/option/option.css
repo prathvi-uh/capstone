@@ -124,10 +124,16 @@
 
 .option .option-col > *:first-child {
   margin-top: 0 !important;
+  text-align: justify !important;
 }
 
 .option .option-col > *:last-child {
   margin-bottom: 0 !important;
+  text-align: justify;
+}
+
+.option.option-col p{
+  text-align: justify !important;
 }
 
 /* ===== TEXT ===== */
@@ -138,6 +144,7 @@
   line-height: 1.75 !important;
   font-weight: 400 !important;
   max-width: none !important;
+  text-align: justify !important;
 }
 
 .option .option-panel h1,
