@@ -3,6 +3,11 @@
   margin: 32px 0 20px;
 }
 
+.breadcrumb a{
+  text-decoration: none;
+  color: inherit;
+}
+
 .breadcrumb-wrapper {
   display: flex;
   align-items: center;
