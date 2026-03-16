@@ -26,6 +26,11 @@
   object-fit: cover;
 }
 
+/* reduce card description text */
+.cards .cards-card-body p {
+  font-size: 15px;
+}
+
 /* Make button look like normal text but still clickable */
 .button.primary {
   background: none !important;
@@ -272,10 +277,15 @@
   }
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
+.cards .cards-card-body h3 {
+  font-size: 18px;
+}
+
 /* -------- Laptop (default already works) -------- */
 
-
 /* -------- Tablet -------- */
+
 @media (width <= 1024px) {
   .cards > ul {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -300,7 +310,6 @@
   }
 
 }
-
 
 /* -------- Mobile -------- */
 @media (width <= 768px) {
@@ -327,7 +336,6 @@
   }
 
 }
-
 
 /* -------- Small Mobile -------- */
 @media (width <= 480px) {
