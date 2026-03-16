@@ -27,7 +27,9 @@
 }
 
 /* reduce card description text */
+
 /* stylelint-disable-next-line no-descending-specificity */
+
 .cards .cards-card-body p {
   font-size: 15px;
 }
@@ -49,6 +51,7 @@
   text-decoration: underline;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .button-wrapper p {
   color: #aaa;
 }
