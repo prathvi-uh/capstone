@@ -224,7 +224,7 @@
 .default-content-wrapper p {
   text-align: justify;
 }
-aem ::-ms-fill-upper
+
 /* Center headings */
 /* stylelint-disable-next-line no-descending-specificity */
 .cards.team li h3,
